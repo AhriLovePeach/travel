@@ -2,12 +2,12 @@
     <div class="icons">
         <swiper :options="swiperOption">
             <!-- slides -->
-            <swiper-slide>
-                <div class="icon" v-for="item of iconsList" :key="item.id">
+            <swiper-slide v-for="(page, index) in pages" :key="index">
+                <div class="icon" v-for="item of page" :key="item.id">
                     <div class="icon-img">
                         <img class="icon-img-content" :src="item.imgUrl" alt="">
                     </div>
-                    <p>{{item.tit}}</p>
+                    <p class="icon-img-tit">{{item.tit}}</p>
                 </div>
             </swiper-slide>
             <!-- Optional controls -->
@@ -88,10 +88,25 @@ export default {
                 }
             ]
         };
-    }
+    },
+    computed: {
+        pages() {
+            const pages = [];
+            this.iconsList.forEach((item, index) => {
+                const page = Math.floor(index / 8);
+                if (!pages[page]) {
+                    pages[page] = [];
+                }
+                pages[page].push(item);
+            });
+            return pages;
+        }
+    },
+    methods: {}
 };
 </script>
 <style lang="stylus" scoped>
+@import '~styles/mixins.styl';
 .icons {
     display: flex;
     flex-wrap: wrap;
@@ -115,6 +130,9 @@ export default {
 
 .icon-img-content {
     width: 78%;
+}
+.icon-img-tit{
+    ellipsis()
 }
 </style>
 
