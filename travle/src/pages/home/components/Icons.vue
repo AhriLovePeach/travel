@@ -2,7 +2,7 @@
     <div class="icons">
         <swiper :options="swiperOption">
             <!-- slides -->
-            <swiper-slide v-for="(page, index) in pages" :key="index">
+            <swiper-slide class="aaa" v-for="(page, index) in pages" :key="index">
                 <div class="icon" v-for="item of page" :key="item.id">
                     <div class="icon-img">
                         <img class="icon-img-content" :src="item.imgUrl" alt="">
@@ -11,7 +11,7 @@
                 </div>
             </swiper-slide>
             <!-- Optional controls -->
-            <div class="swiper-pagination" slot="pagination"></div>
+            <div class="swiper-pagination swiper-pagination-diy" slot="pagination"></div>
         </swiper>
 
     </div>
@@ -107,13 +107,13 @@ export default {
 </script>
 <style lang="stylus" scoped>
 @import '~styles/mixins.styl';
+
 .icons {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     margin-top: 0.1rem;
     overflow: hidden;
-    padding-bottom: 50%;
     text-align: center;
 }
 
@@ -131,8 +131,13 @@ export default {
 .icon-img-content {
     width: 78%;
 }
-.icon-img-tit{
-    ellipsis()
+
+.icon-img-tit {
+    ellipsis();
+}
+
+.icons >>> .swiper-container-horizontal {
+    padding-bottom: 0.6rem;
 }
 </style>
 
