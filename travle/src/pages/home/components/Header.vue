@@ -7,10 +7,12 @@
             <span class="iconfont">&#xe632;</span>
             <input type="text" name="" id="" placeholder="输入城市/景点/游玩主题">
         </div>
-        <div class="header-right iconfont">
-            {{city}}
-            <span class="iconfont">&#xe64a;</span>
-        </div>
+        <router-link to="/city">
+            <div class="header-right iconfont">
+                {{city}}
+                <span class="iconfont">&#xe64a;</span>
+            </div>
+        </router-link>
     </div>
 </template>
 <script>
@@ -26,7 +28,7 @@ export default {
 
 .header {
     display: flex;
-    line-height: 0.86rem;
+    line-height: $headerHeight;
     color: #ffffff;
     background: $bgColor;
     text-align: center;
@@ -50,6 +52,7 @@ export default {
 
 .header-right {
     width: 1.24rem;
+    color: #ffffff;
 }
 </style>
 
