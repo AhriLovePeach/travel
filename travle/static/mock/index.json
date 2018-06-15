@@ -1,0 +1,137 @@
+{
+    "ret": true,
+    "data": {
+        "city": "虞城",
+        "swiperList": [{
+                "id": "0001",
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1806/f8/17ad6b47ecce9702.jpg_750x200_44330998.jpg"
+            },
+            {
+                "id": "0002",
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1805/13/6332699c44387902.jpg_750x200_b7afa4f8.jpg"
+            },
+            {
+                "id": "0003",
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1805/ab/e37740bb7cc63502.jpg_750x200_8c76c2d7.jpg"
+            },
+            {
+                "id": "0004",
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1805/d2/2a72bb766d8f6d02.jpg_750x200_e1c78528.jpg"
+            }
+        ],
+        "iconsList": [{
+                "id": "001",
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+                "tit": "景点门票"
+            },
+            {
+                "id": "002",
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png",
+                "tit": "一日游"
+            },
+            {
+                "id": "003",
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
+                "tit": "必游榜单"
+            },
+            {
+                "id": "004",
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
+                "tit": "动植物园"
+            },
+            {
+                "id": "005",
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/bd/9f7b9b2b60c1502.png",
+                "tit": "踏青赏花"
+            },
+            {
+                "id": "006",
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1805/57/1e29afd06f881102.png",
+                "tit": "普陀山"
+            },
+            {
+                "id": "007",
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/b1/528a9e80403b8c02.png",
+                "tit": "上海欢乐谷"
+            },
+            {
+                "id": "008",
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/ed/cf572be30fc32f02.png",
+                "tit": "Q+精选"
+            },
+            {
+                "id": "009",
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/de/f26be47a6bf02a02.png",
+                "tit": "上海迪士尼"
+            },
+            {
+                "id": "010",
+                "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/80/416c6ab3368d1f02.png",
+                "tit": "全部玩乐"
+            }
+        ],
+        "recommentList": [{
+                "id": "001",
+                "imgUrl": "http://img1.qunarzz.com/sight/p0/1603/17/170481fb9caf500790.water.jpg_200x200_a32b9a92.jpg",
+                "title": "上海野生动物园",
+                "desc": "这里有漂亮的鸳鸯在水中成双成对的游着，等待着游人发现他们的甜蜜。"
+            },
+            {
+                "id": "002",
+                "imgUrl": "http://img1.qunarzz.com/sight/p0/1502/ba/ba5f873a22327e0f.water.jpg_200x200_9bf5cc14.jpg",
+                "title": "上海影视乐园",
+                "desc": "看着这种款式的公交车，还以为自己穿越到了民国。大上海风情在这里可以展现的淋漓尽致。"
+            },
+            {
+                "id": "003",
+                "imgUrl": "http://img1.qunarzz.com/sight/p0/1412/9f/fbff2a5302c0ce906ef9b64159730f89.water.jpg_200x200_87806940.jpg",
+                "title": "上海海洋水族馆",
+                "desc": "海豹缸，其半弧形亚克力缸体构造是水族馆另一个独一无二的设计。在这里您可以同四只可爱的斑海豹近距离的“接触”。"
+            },
+            {
+                "id": "004",
+                "imgUrl": "http://img1.qunarzz.com/sight/p0/1507/b3/b33a7caa457c0a52.img.jpg_200x200_fe73bd81.jpg",
+                "title": "东方明珠空中旋转餐厅",
+                "desc": "塔顶有大型旋转餐厅，集就餐与观赏功能于一体，让吃饭不再单调！"
+            },
+            {
+                "id": "005",
+                "imgUrl": "http://img1.qunarzz.com/sight/p0/1411/4f/146031f0bc5d7e0dd960d3f5bf0c9eca.water.jpg_200x200_f22705c9.jpg",
+                "title": "上海科技馆",
+                "desc": "占地面积6.8万多平方米，建筑面积9.8万平方米，分为11个风格各异的主题展区、4个高科技特种影院、3个古今中外科学家及其足迹的艺术长廊、2个主题特展和若干个临时展厅。"
+            }
+        ],
+        "weekendList": [{
+                "id": "001",
+                "imgUrl": "http://img1.qunarzz.com/sight/source/1505/7d/df6ff468331c43.jpg_r_640x214_1f3783d0.jpg",
+                "title": "上海必游TOP10",
+                "desc": "中西合璧，现代和传统各有各的精彩"
+            },
+            {
+                "id": "002",
+                "imgUrl": "http://img1.qunarzz.com/sight/source/1603/ad/69b0fc5f48ad5f.jpg_r_640x214_b0fd5c7b.jpg",
+                "title": "亲子时光TOP10",
+                "desc": "走进自然或玩转乐园，感知大千世界"
+            },
+            {
+                "id": "003",
+                "imgUrl": "http://img1.qunarzz.com/sight/source/1511/1d/fe098e8cfec117.jpg_r_640x214_a9be292a.jpg",
+                "title": "上海城市观光",
+                "desc": "来这里寻找你所认识的上海"
+            },
+            {
+                "id": "004",
+                "imgUrl": "http://img1.qunarzz.com/sight/source/1505/7b/2a6b0ce087f0e5.jpg_r_640x214_5c76b115.jpg",
+                "title": "情迷博物馆",
+                "desc": "穿梭时光岁月寻找答案"
+            },
+            {
+                "id": "005",
+                "imgUrl": "http://img1.qunarzz.com/sight/source/1505/6f/2711e071838590.jpg_r_640x214_8f1ad9a1.jpg",
+                "title": "戏水清凉一夏",
+                "desc": "夏日戏水，玩“乐”无穷"
+            }
+        ]
+
+    }
+}
