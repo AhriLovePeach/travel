@@ -2,7 +2,7 @@
     <div class="header">
         <router-link to="/">
             <div class="header-left">
-                <span class="iconfont">&#xe624;</span>
+                <span class="iconfont">&#xe624;aaa</span>
             </div>
         </router-link>
         <div class="header-right">城市选择</div>
