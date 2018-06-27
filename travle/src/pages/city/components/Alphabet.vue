@@ -1,20 +1,15 @@
 <template>
     <ul class="list">
-        <li class="item">A</li>
-        <li class="item">A</li>
-        <li class="item">A</li>
-        <li class="item">A</li>
-        <li class="item">A</li>
-        <li class="item">A</li>
-        <li class="item">A</li>
-        <li class="item">A</li>
-        <li class="item">A</li>
+        <li v-for="(item, key) in cities" :key="key" class="item">{{key}}</li>
     </ul>
 </template>
 <script>
 import BScroll from "better-scroll";
 export default {
-    name: "CityAlphabet"
+    name: "CityAlphabet",
+    props: {
+        cities: Object
+    }
 };
 </script>
 <style lang="stylus" scoped>

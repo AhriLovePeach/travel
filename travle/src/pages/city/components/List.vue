@@ -7,106 +7,20 @@
                     <li class="button-warpper">
                         <div class="button">上海</div>
                     </li>
-                    <li class="button-warpper">
-                        <div class="button">上海</div>
-                    </li>
-                    <li class="button-warpper">
-                        <div class="button">上海</div>
-                    </li>
-                    <li class="button-warpper">
-                        <div class="button">上海</div>
-                    </li>
-                    <li class="button-warpper">
-                        <div class="button">上海</div>
-                    </li>
                 </ul>
             </div>
             <div class="area">
                 <div class="title border-topbottom">热门城市</div>
                 <ul class="button-list">
-                    <li class="button-warpper">
-                        <div class="button">北京</div>
-                    </li>
-                    <li class="button-warpper">
-                        <div class="button">上海</div>
-                    </li>
-                    <li class="button-warpper">
-                        <div class="button">深圳</div>
-                    </li>
-                    <li class="button-warpper">
-                        <div class="button">成都</div>
-                    </li>
-                    <li class="button-warpper">
-                        <div class="button">广州</div>
-                    </li>
-                    <li class="button-warpper">
-                        <div class="button">大连</div>
-                    </li>
-                    <li class="button-warpper">
-                        <div class="button">张家界</div>
-                    </li>
-                    <li class="button-warpper">
-                        <div class="button">香港</div>
-                    </li>
-                    <li class="button-warpper">
-                        <div class="button">澳门</div>
+                    <li v-for="item of hotCities" :key="item.id" class="button-warpper">
+                        <div class="button">{{item.name}}</div>
                     </li>
                 </ul>
             </div>
-            <div class="area">
-                <div class="title border-topbottom">A</div>
+            <div class="area" v-for="(item, key) of cities" :key="key">
+                <div class="title border-topbottom">{{key}}</div>
                 <ul class="item-list">
-                    <li class="item border-bottom">阿坝藏族羌族自治州</li>
-                    <li class="item border-bottom">阿克苏地区</li>
-                    <li class="item border-bottom">阿拉尔</li>
-                    <li class="item border-bottom">阿勒泰</li>
-                    <li class="item border-bottom">阿拉善盟</li>
-                    <li class="item border-bottom">澳门</li>
-                </ul>
-                <div class="title border-topbottom">A</div>
-                <ul class="item-list">
-                    <li class="item border-bottom">阿坝藏族羌族自治州</li>
-                    <li class="item border-bottom">阿克苏地区</li>
-                    <li class="item border-bottom">阿拉尔</li>
-                    <li class="item border-bottom">阿勒泰</li>
-                    <li class="item border-bottom">阿拉善盟</li>
-                    <li class="item border-bottom">澳门</li>
-                </ul>
-                <div class="title border-topbottom">A</div>
-                <ul class="item-list">
-                    <li class="item border-bottom">阿坝藏族羌族自治州</li>
-                    <li class="item border-bottom">阿克苏地区</li>
-                    <li class="item border-bottom">阿拉尔</li>
-                    <li class="item border-bottom">阿勒泰</li>
-                    <li class="item border-bottom">阿拉善盟</li>
-                    <li class="item border-bottom">澳门</li>
-                </ul>
-                <div class="title border-topbottom">A</div>
-                <ul class="item-list">
-                    <li class="item border-bottom">阿坝藏族羌族自治州</li>
-                    <li class="item border-bottom">阿克苏地区</li>
-                    <li class="item border-bottom">阿拉尔</li>
-                    <li class="item border-bottom">阿勒泰</li>
-                    <li class="item border-bottom">阿拉善盟</li>
-                    <li class="item border-bottom">澳门</li>
-                </ul>
-                <div class="title border-topbottom">A</div>
-                <ul class="item-list">
-                    <li class="item border-bottom">阿坝藏族羌族自治州</li>
-                    <li class="item border-bottom">阿克苏地区</li>
-                    <li class="item border-bottom">阿拉尔</li>
-                    <li class="item border-bottom">阿勒泰</li>
-                    <li class="item border-bottom">阿拉善盟</li>
-                    <li class="item border-bottom">澳门</li>
-                </ul>
-                <div class="title border-topbottom">A</div>
-                <ul class="item-list">
-                    <li class="item border-bottom">阿坝藏族羌族自治州</li>
-                    <li class="item border-bottom">阿克苏地区</li>
-                    <li class="item border-bottom">阿拉尔</li>
-                    <li class="item border-bottom">阿勒泰</li>
-                    <li class="item border-bottom">阿拉善盟</li>
-                    <li class="item border-bottom">澳门</li>
+                    <li v-for="inneritem of item" :key="inneritem.id" class="item border-bottom">{{inneritem.name}}</li>
                 </ul>
             </div>
         </div>
@@ -116,6 +30,10 @@
 import BScroll from "better-scroll";
 export default {
     name: "CityList",
+    props: {
+        hotCities: Array,
+        cities: Object
+    },
     mounted() {
         this.scroll = new BScroll(this.$refs.wrapper);
     }

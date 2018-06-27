@@ -33,6 +33,11 @@ export default {
         };
     },
     methods: {
+        /**
+         * [getHomeInfo 接受数据]
+         * @param  {[type]}              [description]
+         * @return {[type]}              [description]
+         */
         getHomeInfo() {
             // /api/index.json 是在config下的index.js中的proxyTable字段设置的
             axios.get("/api/index.json").then(this.getHomeInfoSuss);
