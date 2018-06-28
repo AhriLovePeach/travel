@@ -2,8 +2,8 @@
     <div>
         <city-header></city-header>
         <city-search></city-search>
-        <city-list :hotCities="hotCities" :cities="cities"></city-list>
-        <city-alphabet :cities="cities"></city-alphabet>
+        <city-list :hotCities="hotCities" :cities="cities" :letter="letter"></city-list>
+        <city-alphabet :cities="cities" @change="handleLetterChange"></city-alphabet>
     </div>
 </template>
 <script>
@@ -23,7 +23,8 @@ export default {
     data() {
         return {
             hotCities: [],
-            cities:{}
+            cities:{},
+            letter: ''
         };
     },
     methods: {
@@ -51,7 +52,15 @@ export default {
                 this.recommentList = resData.data.recommentList;
                 this.weekendList = resData.data.weekendList;
             }
-            console.log(resData);
+        },
+        /**
+         * @handleLetterChange 处理接受子组件传过来的字母数据
+         * @author zf
+         * @date 2018-06-27
+         * @param {*} params
+         */
+        handleLetterChange(letter){
+            this.letter = letter;
         }
     },
     mounted() {

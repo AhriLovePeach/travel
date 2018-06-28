@@ -1,6 +1,6 @@
 <template>
     <ul class="list">
-        <li v-for="(item, key) in cities" :key="key" class="item">{{key}}</li>
+        <li v-for="item in letters" :key="item" :ref="item" @click="handleLetterClick" @touchstart="handleTouchStart" @touchmove="handleTouchMove" @touchend="handleTouchEnd" class="item">{{item}}</li>
     </ul>
 </template>
 <script>
@@ -9,6 +9,67 @@ export default {
     name: "CityAlphabet",
     props: {
         cities: Object
+    },
+    data() {
+        return {
+            touchStatus: false
+        };
+    },
+    computed: {
+        // 地域的首字母数组
+        letters() {
+            const letters = [];
+            const cities = this.cities;
+            for (const i in cities) {
+                letters.push(i);
+            }
+            return letters;
+        }
+    },
+    methods: {
+        /**
+         * @handleLetterClick 获取点击的是哪个字母数据
+         * @author zf
+         * @date 2018-06-27
+         * @param {*} params
+         */
+        handleLetterClick(e) {
+            this.$emit("change", e.target.innerText);
+        },
+        /**
+         * @handleTouchStart 开始监听拖动区域字母的时候地域跟着改变的状态值
+         * @author zf
+         * @date 2018-06-27
+         * @param {*} params
+         */
+        handleTouchStart() {
+            this.touchStatus = true;
+        },
+        /**
+         * @handleTouchMove 拖动的时候监听拖动区域字母的时候地域跟着改变
+         * @author zf
+         * @date 2018-06-27
+         * @param {*} params
+         */
+        handleTouchMove(e) {
+            if (this.touchStatus) {
+                const startY = this.$refs["A"][0].offsetTop;
+                const touchY = e.targetTouches[0].clientY - 79;
+                const index = Math.floor((touchY - startY) / 20);
+                if (index >= 0 && index < this.letters.length) {
+                    this.$emit("change", this.letters[index]);
+                }
+            }
+        },
+        /**
+         * @handleTouchEnd 结束监听拖动区域字母的时候地域跟着改变的状态值
+         * @author zf
+         * @date 2018-06-27
+         * @param {*} params
+         */
+        handleTouchEnd() {
+            this.touchStatus = false;
+        }
     }
 };
 </script>
