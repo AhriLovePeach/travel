@@ -3,14 +3,16 @@
         <div class="search">
             <input v-model="keyWorld" class="search-input" type="text" name="" placeholder="输入城市名或拼音" />
         </div>
-        <div class="search-content">
+        <div class="search-content" ref="searchWrapper" v-show="keyWorld">
             <ul>
-                <li class="search-item" v-for="item of list" :key="item.id">{{item.name}}</li>
+                <li class="search-item border-bottom" v-for="item of list" :key="item.id">{{item.name}}</li>
+                <li v-show="hasNoData" class="search-item text-center border-bottom">没有您所搜索的城市</li>
             </ul>
         </div>
     </div>
 </template>
 <script>
+import BScroll from "better-scroll";
 export default {
     name: "CitySearch",
     props: {
@@ -22,6 +24,11 @@ export default {
             list: [],
             timer: null
         };
+    },
+    computed: {
+        hasNoData() {
+            return !this.list.length;
+        }
     },
     watch: {
         keyWorld() {
@@ -44,6 +51,9 @@ export default {
                 this.list = result;
             }, 100);
         }
+    },
+    mounted() {
+        this.scroll = new BScroll(this.$refs.searchWrapper);
     }
 };
 </script>
@@ -75,6 +85,17 @@ export default {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: red;
+    background-color: #eeeeee;
+}
+
+.search-item {
+    line-height: 0.62rem;
+    padding-left: 0.2rem;
+    color: #666;
+    background: #ffffff;
+}
+
+.text-center {
+    text-align: center;
 }
 </style>

@@ -4,7 +4,7 @@
             <div class="area">
                 <div class="title border-topbottom">当前城市</div>
                 <ul class="button-list">
-                    <li class="button-warpper">
+                    <li class="button-warpper" @click="aaaa">
                         <div class="button">上海</div>
                     </li>
                 </ul>
@@ -44,6 +44,11 @@ export default {
                 const element = this.$refs[this.letter][0];
                 this.scroll.scrollToElement(element, 500);
             }
+        }
+    },
+    methods: {
+        aaaa() {
+            console.log('qqqqqqqqqqqqqqqqqqq');
         }
     }
 };
