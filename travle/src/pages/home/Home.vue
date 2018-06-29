@@ -1,6 +1,6 @@
 <template>
     <div>
-        <home-header :city="city"></home-header>
+        <home-header></home-header>
         <home-swiper :swiperList="swiperList"></home-swiper>
         <home-icons :iconsList="iconsList"></home-icons>
         <home-recomment :recommentList="recommentList"></home-recomment>
@@ -25,7 +25,6 @@ export default {
     },
     data() {
         return {
-            city: "",
             swiperList: [],
             iconsList: [],
             recommentList: [],
@@ -45,13 +44,11 @@ export default {
         getHomeInfoSuss(res) {
             const resData = res.data;
             if (resData.ret && resData.data) {
-                this.city = resData.data.city;
                 this.swiperList = resData.data.swiperList;
                 this.iconsList = resData.data.iconsList;
                 this.recommentList = resData.data.recommentList;
                 this.weekendList = resData.data.weekendList;
             }
-            console.log(resData);
         }
     },
     mounted() {

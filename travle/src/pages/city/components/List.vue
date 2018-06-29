@@ -4,15 +4,15 @@
             <div class="area">
                 <div class="title border-topbottom">当前城市</div>
                 <ul class="button-list">
-                    <li class="button-warpper" @click="aaaa">
-                        <div class="button">上海</div>
+                    <li class="button-warpper">
+                        <div class="button">{{this.$store.state.city}}</div>
                     </li>
                 </ul>
             </div>
             <div class="area">
                 <div class="title border-topbottom">热门城市</div>
                 <ul class="button-list">
-                    <li v-for="item of hotCities" :key="item.id" class="button-warpper">
+                    <li @click="handleCityClick(item.name)" v-for="item of hotCities" :key="item.id" class="button-warpper">
                         <div class="button">{{item.name}}</div>
                     </li>
                 </ul>
@@ -20,7 +20,7 @@
             <div class="area" v-for="(item, key) of cities" :key="key" :ref="key">
                 <div class="title border-topbottom">{{key}}</div>
                 <ul class="item-list">
-                    <li v-for="inneritem of item" :key="inneritem.id" class="item border-bottom">{{inneritem.name}}</li>
+                    <li @click="handleCityClick(inneritem.name)" v-for="inneritem of item" :key="inneritem.id" class="item border-bottom">{{inneritem.name}}</li>
                 </ul>
             </div>
         </div>
@@ -47,8 +47,9 @@ export default {
         }
     },
     methods: {
-        aaaa() {
-            console.log('qqqqqqqqqqqqqqqqqqq');
+        handleCityClick(city) {
+            this.$store.dispatch("changeCity", city);
+            this.$router.push("/");
         }
     }
 };

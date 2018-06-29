@@ -5,7 +5,7 @@
         </div>
         <div class="search-content" ref="searchWrapper" v-show="keyWorld">
             <ul>
-                <li class="search-item border-bottom" v-for="item of list" :key="item.id">{{item.name}}</li>
+                <li @click="handleCityClick(item.name)" class="search-item border-bottom" v-for="item of list" :key="item.id">{{item.name}}</li>
                 <li v-show="hasNoData" class="search-item text-center border-bottom">没有您所搜索的城市</li>
             </ul>
         </div>
@@ -50,6 +50,12 @@ export default {
                 }
                 this.list = result;
             }, 100);
+        }
+    },
+    methods: {
+        handleCityClick(city) {
+            this.$store.dispatch("changeCity", city);
+            this.$router.push('/');
         }
     },
     mounted() {

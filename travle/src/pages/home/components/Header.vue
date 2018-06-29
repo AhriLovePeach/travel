@@ -8,23 +8,25 @@
             <input type="text" name="" id="" placeholder="输入城市/景点/游玩主题">
         </div>
         <router-link to="/city">
-            <div class="header-right iconfont">
-                {{city}}
+            <div class="header-right">
+                <span class="header-right-city">{{this.city}}</span>
                 <span class="iconfont">&#xe64a;</span>
             </div>
         </router-link>
     </div>
 </template>
 <script>
+import { mapState } from "vuex";
 export default {
     name: "HomeHeader",
-    props: {
-        city: String
+    computed: {
+        ...mapState(["city"])
     }
 };
 </script>
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl';
+@import '~styles/mixins.styl';
 
 .header {
     display: flex;
@@ -51,8 +53,12 @@ export default {
 }
 
 .header-right {
-    width: 1.24rem;
+    padding: 0 0.1rem;
     color: #ffffff;
+}
+
+.header-right-city {
+    width: 1.24rem;
 }
 </style>
 
