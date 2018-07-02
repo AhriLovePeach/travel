@@ -23,8 +23,8 @@ export default {
     data() {
         return {
             hotCities: [],
-            cities:{},
-            letter: ''
+            cities: {},
+            letter: ""
         };
     },
     methods: {
@@ -59,7 +59,7 @@ export default {
          * @date 2018-06-27
          * @param {*} params
          */
-        handleLetterChange(letter){
+        handleLetterChange(letter) {
             this.letter = letter;
         }
     },
