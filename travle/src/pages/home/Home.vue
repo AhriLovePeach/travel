@@ -38,7 +38,7 @@ export default {
     },
     methods: {
         /**
-         * [getHomeInfo 接受数据]
+         * [getHomeInfo 接收数据]
          * @param  {[type]}              [description]
          * @return {[type]}              [description]
          */
@@ -63,9 +63,6 @@ export default {
         this.getHomeInfo();
     },
     activated() {
-        console.log(this.city);
-        console.log(this.lastCity);
-
         if (this.lastCity !== this.city) {
             this.getHomeInfo();
             this.lastCity = this.city;
