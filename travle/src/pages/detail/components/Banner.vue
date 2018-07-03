@@ -1,11 +1,13 @@
 <template>
     <div>
         <div class="banner" @click="handleBannerClick">
-            <img class="banner-img" src="http://img1.qunarzz.com/sight/p0/201310/22/951dc8fa276686d8c8d65eac.jpg_350x240_90d0dad9.jpg" />
+            <img class="banner-img" src="http://img1.qunarzz.com/sight/p0/1603/17/170481fb9caf500790.water.jpg_600x330_c46225ab.jpg" />
             <div class="banner-info">
                 <div class="banner-title">上海野生动物园(AAAAA景区)</div>
                 <div class="banner-numer">
-                    <span class="iconfont banner-icon">&#xe6e5;</span> 26</div>
+                    <span class="iconfont banner-icon">&#xe6e5;</span>
+                    26
+                </div>
             </div>
         </div>
         <common-gallary :imgs="imgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>
@@ -70,8 +72,9 @@ export default {
 .banner-numer {
     height: 0.32rem;
     line-height: 0.32rem;
-    margin-top: 0.14rem;
-    padding: 0 0.4rem;
+    margin-top: 0.1rem;
+    margin-right: 0.1rem;
+    padding: 0.05rem 0.4rem;
     border-radius: 0.2rem;
     background: rgba(0, 0, 0, 0.6);
     font-size: 0.24rem;
