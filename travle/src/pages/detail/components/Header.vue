@@ -9,14 +9,16 @@
                     <span class="iconfont">&#xe624;</span>
                 </div>
             </router-link>
-            <div class="header-fixed-right">景点详情</div>
+            <div class="header-fixed-right">{{sightName}}</div>
         </div>
-        <div style="height: 50rem;"></div>
     </div>
 </template>
 <script>
 export default {
     name: "DetailHeader",
+    props: {
+        sightName: String
+    },
     data() {
         return {
             showAbs: true,
@@ -69,6 +71,7 @@ export default {
 }
 
 .header-fixed {
+    z-index: 2;
     display: flex;
     position: fixed;
     top: 0;
