@@ -10,11 +10,15 @@
                 </div>
             </div>
         </div>
-        <common-gallary :imgs="gallaryImgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>
+        <!-- 幻灯片 -->
+        <fide-animation>
+            <common-gallary :imgs="gallaryImgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>
+        </fide-animation>
     </div>
 </template>
 <script>
 import CommonGallary from "common/gallary/Gallary";
+import FideAnimation from "common/fide/FideAnimation";
 export default {
     name: "DetailBanner",
     props: {
@@ -23,7 +27,8 @@ export default {
         gallaryImgs: Array
     },
     components: {
-        CommonGallary: CommonGallary
+        CommonGallary: CommonGallary,
+        FideAnimation: FideAnimation
     },
     data() {
         return {
